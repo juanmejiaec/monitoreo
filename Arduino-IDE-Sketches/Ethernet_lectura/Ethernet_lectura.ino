@@ -17,7 +17,7 @@ puede monitorear la IP de su PC dentro de la ventana de comandos CMD con el coma
                                // Introduzca una direcciÛn MAC y la direcciÛn IP para el controlador
 byte mac[] = { 
 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-IPAddress ip(192,168,1,20);   // Esta direccion IP debe ser cambiada obligatoriamente 
+IPAddress ip(192,168,1,30);   // Esta direccion IP debe ser cambiada obligatoriamente 
                               // dependiendo de la subred de su Area Local y es la que 
                               // usara para conectarse por el Navegador.
 
@@ -41,16 +41,17 @@ void loop() {
           cliente.println("Connection: close"); 
     cliente.println("Refresh: 3");  // refresca la pagina automaticamente cada 3 segundos
           cliente.println();
-          cliente.println("<!DOCTYPE HTML>"); 
+          cliente.println("<!DOCTYPE html>"); 
           cliente.println("<html>");
-          cliente.println("<HEAD>");
-          cliente.println("<TITLE>Ethernet Monitor</TITLE>");
-          cliente.println("</HEAD>");
-          cliente.println("<BODY>");
+          cliente.println("<head>");
+          cliente.println("<title>Ethernet Monitor</title>");
+          //cliente.println("'<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>'");
+          cliente.println("</head>");
+          cliente.println("<body>");
           cliente.println("<hr />");
-          cliente.println("<H1>Arduino Monitor</H1>");
+          cliente.println("<h1>Arduino Monitor</h1>");
           cliente.println("<br />");  
-          cliente.println("<H2>Monitorea A0-A5</H2>");
+          cliente.println("<h2>Monitorea A0-A5</h2>");
           cliente.println("<br />");  
           cliente.println("Lectura Analoga Ethernet");  
           cliente.println("<br />");
